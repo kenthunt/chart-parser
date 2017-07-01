@@ -1,0 +1,1137 @@
+[
+  {
+    "distance": "150 yards",
+    "floor": 450,
+    "fractionals": [
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 450
+      }
+    ]
+  },
+  {
+    "distance": "1 furlong",
+    "floor": 660,
+    "fractionals": [
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 660
+      }
+    ]
+  },
+  {
+    "distance": "2 furlongs",
+    "floor": 1320,
+    "fractionals": [
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 1320
+      }
+    ]
+  },
+  {
+    "distance": "2 1/2 furlongs",
+    "floor": 1650,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 1650
+      }
+    ]
+  },
+  {
+    "distance": "3 furlongs",
+    "floor": 1980,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 1980
+      }
+    ]
+  },
+  {
+    "distance": "3 1/2 furlongs",
+    "floor": 2310,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "3/8",
+        "feet": 1980
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 2310
+      }
+    ]
+  },
+  {
+    "distance": "3 3/4 furlongs",
+    "floor": 2475,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 2475
+      }
+    ]
+  },
+  {
+    "distance": "4 furlongs",
+    "floor": 2640,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 2640
+      }
+    ]
+  },
+  {
+    "distance": "4 1/2 furlongs",
+    "floor": 2970,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 2970
+      }
+    ]
+  },
+  {
+    "distance": "5 furlongs",
+    "floor": 3300,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 3300
+      }
+    ]
+  },
+  {
+    "distance": "5 1/4 furlongs",
+    "floor": 3465,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 3465
+      }
+    ]
+  },
+  {
+    "distance": "5 1/2 furlongs",
+    "floor": 3630,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "5/8",
+        "feet": 3300
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 3630
+      }
+    ]
+  },
+  {
+    "distance": "6 furlongs",
+    "floor": 3960,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "5/8",
+        "feet": 3300
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 3960
+      }
+    ]
+  },
+  {
+    "distance": "6 1/2 furlongs",
+    "floor": 4290,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 4290
+      }
+    ]
+  },
+  {
+    "distance": "7 furlongs",
+    "floor": 4620,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 4620
+      }
+    ]
+  },
+  {
+    "distance": "7 1/2 furlongs",
+    "floor": 4950,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 4950
+      }
+    ]
+  },
+  {
+    "distance": "1 mile",
+    "floor": 5280,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "7/8",
+        "feet": 4620
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 5280
+      }
+    ]
+  },
+  {
+    "distance": "1 mile 40 yards",
+    "floor": 5400,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 5400
+      }
+    ]
+  },
+  {
+    "distance": "1 mile 70 yards",
+    "floor": 5490,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 5490
+      }
+    ]
+  },
+  {
+    "distance": "1 1/16 miles",
+    "floor": 5610,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 5610
+      }
+    ]
+  },
+  {
+    "distance": "1 1/8 miles",
+    "floor": 5940,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 5940
+      }
+    ]
+  },
+  {
+    "distance": "1 3/16 miles",
+    "floor": 6270,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 6270
+      }
+    ]
+  },
+  {
+    "distance": "1 1/4 miles",
+    "floor": 6600,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 6600
+      }
+    ]
+  },
+  {
+    "distance": "1 5/16 miles",
+    "floor": 6930,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 6930
+      }
+    ]
+  },
+  {
+    "distance": "1 3/8 miles",
+    "floor": 7260,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 5,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 7260
+      }
+    ]
+  },
+  {
+    "distance": "1 7/16 miles",
+    "floor": 7590,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 5,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 7590
+      }
+    ]
+  },
+  {
+    "distance": "1 1/2 miles",
+    "floor": 7920,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 5,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 7920
+      }
+    ]
+  },
+  {
+    "distance": "1 9/16 miles",
+    "floor": 8250,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/4",
+        "feet": 1320
+      },
+      {
+        "point": 2,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 3,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 4,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 5,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 8250
+      }
+    ]
+  },
+  {
+    "distance": "1 5/8 miles",
+    "floor": 8580,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 3,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 4,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 5,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 8580
+      }
+    ]
+  },
+  {
+    "distance": "1 11/16 miles",
+    "floor": 8910,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 3,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 4,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 5,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 8910
+      }
+    ]
+  },
+  {
+    "distance": "1 3/4 miles",
+    "floor": 9240,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "3/4",
+        "feet": 3960
+      },
+      {
+        "point": 3,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 4,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 5,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 9240
+      }
+    ]
+  },
+  {
+    "distance": "1 13/16 miles",
+    "floor": 9570,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 4,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 5,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 9570
+      }
+    ]
+  },
+  {
+    "distance": "1 7/8 miles",
+    "floor": 9900,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 4,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 5,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 9900
+      }
+    ]
+  },
+  {
+    "distance": "1 15/16 miles",
+    "floor": 10230,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 4,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 5,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 10230
+      }
+    ]
+  },
+  {
+    "distance": "2 miles",
+    "floor": 10560,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/4m",
+        "feet": 6600
+      },
+      {
+        "point": 4,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 5,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 10560
+      }
+    ]
+  },
+  {
+    "distance": "2 miles 40 yards",
+    "floor": 10680,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 4,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 5,
+        "text": "2m",
+        "feet": 10560
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 10680
+      }
+    ]
+  },
+  {
+    "distance": "2 miles 70 yards",
+    "floor": 10770,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 4,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 5,
+        "text": "2m",
+        "feet": 10560
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 10770
+      }
+    ]
+  },
+  {
+    "distance": "2 1/16 miles",
+    "floor": 10890,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 4,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 5,
+        "text": "2m",
+        "feet": 10560
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 10890
+      }
+    ]
+  },
+  {
+    "distance": "2 1/8 miles",
+    "floor": 11220,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 4,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 5,
+        "text": "2m",
+        "feet": 10560
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 11220
+      }
+    ]
+  },
+  {
+    "distance": "2 3/16 miles",
+    "floor": 11550,
+    "fractionals": [
+      {
+        "point": 1,
+        "text": "1/2",
+        "feet": 2640
+      },
+      {
+        "point": 2,
+        "text": "1m",
+        "feet": 5280
+      },
+      {
+        "point": 3,
+        "text": "1 1/2m",
+        "feet": 7920
+      },
+      {
+        "point": 4,
+        "text": "1 3/4m",
+        "feet": 9240
+      },
+      {
+        "point": 5,
+        "text": "2m",
+        "feet": 10560
+      },
+      {
+        "point": 6,
+        "text": "Fin",
+        "feet": 11550
+      }
+    ]
+  }
+]

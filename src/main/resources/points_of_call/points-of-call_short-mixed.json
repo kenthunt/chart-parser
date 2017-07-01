@@ -1,0 +1,42 @@
+[
+  {
+    "distance": "Less than 330 yards",
+    "floor": 0,
+    "calls": [
+      {
+        "point": 1,
+        "text": "Start"
+      },
+      {
+        "point": 5,
+        "text": "Str"
+      },
+      {
+        "point": 6,
+        "text": "Fin"
+      }
+    ]
+  },
+  {
+    "distance": "330 Yards and Longer",
+    "floor": 990,
+    "calls": [
+      {
+        "point": 1,
+        "text": "Start"
+      },
+      {
+        "point": 2,
+        "text": "Str1"
+      },
+      {
+        "point": 5,
+        "text": "Str"
+      },
+      {
+        "point": 6,
+        "text": "Fin"
+      }
+    ]
+  }
+]

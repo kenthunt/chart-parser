@@ -1,0 +1,68 @@
+[
+  {
+    "distance": "Less than 3 1/4 furlongs",
+    "floor": 0,
+    "calls": [
+      {
+        "point": 1,
+        "text": "Start"
+      },
+      {
+        "point": 5,
+        "text": "Str"
+      },
+      {
+        "point": 6,
+        "text": "Fin"
+      }
+    ]
+  },
+  {
+    "distance": "3 1/4 Furlongs to 5 furlongs",
+    "floor": 2145,
+    "calls": [
+      {
+        "point": 1,
+        "text": "Start"
+      },
+      {
+        "point": 2,
+        "text": "Str1"
+      },
+      {
+        "point": 5,
+        "text": "Str"
+      },
+      {
+        "point": 6,
+        "text": "Fin"
+      }
+    ]
+  },
+  {
+    "distance": "5 Furlongs",
+    "floor": 3300,
+    "calls": [
+      {
+        "point": 1,
+        "text": "Start"
+      },
+      {
+        "point": 2,
+        "text": "Str1"
+      },
+      {
+        "point": 3,
+        "text": "Str2"
+      },
+      {
+        "point": 5,
+        "text": "Str"
+      },
+      {
+        "point": 6,
+        "text": "Fin"
+      }
+    ]
+  }
+]
