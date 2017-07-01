@@ -71,14 +71,9 @@ public class ChartParser {
     }
 
     public static ChartParser create() {
-        SimpleModule simpleLocalDateModule = new SimpleModule();
-        simpleLocalDateModule.addSerializer(LocalDate.class, new SimpleLocalDateSerializer());
-        simpleLocalDateModule.addDeserializer(LocalDate.class, new SimpleLocalDateDeserializer());
-        // this will also add JDK 8 Parameter Name access
-        ObjectMapper jsonMapper = new ObjectMapper().findAndRegisterModules()
-                .registerModule(simpleLocalDateModule);
+        ObjectMapper jsonMapper = getObjectMapper();
 
-        CsvMapper csvMapper = new CsvMapper();
+        CsvMapper csvMapper = getCsvMapper();
 
         TrackService trackService = new TrackService(new TrackRepository(csvMapper));
         FractionalService fractionalService = new FractionalService(
@@ -87,6 +82,18 @@ public class ChartParser {
                 new PointsOfCallRepository(jsonMapper));
 
         return new ChartParser(trackService, fractionalService, pointsOfCallService);
+    }
+
+    public static ObjectMapper getObjectMapper() {
+        SimpleModule simpleLocalDateModule = new SimpleModule();
+        simpleLocalDateModule.addSerializer(LocalDate.class, new SimpleLocalDateSerializer());
+        simpleLocalDateModule.addDeserializer(LocalDate.class, new SimpleLocalDateDeserializer());
+        // this will also add JDK 8 Parameter Name access
+        return new ObjectMapper().findAndRegisterModules().registerModule(simpleLocalDateModule);
+    }
+
+    public static CsvMapper getCsvMapper() {
+        return new CsvMapper();
     }
 
     public List<RaceResult> parse(File pdfChartFile) {
@@ -537,7 +544,6 @@ public class ChartParser {
      * Chart, returning a list of {@link ChartCharacter}s
      */
     static List<ChartCharacter> readChartCsv(String csvChart) throws ChartParserException {
-        CsvMapper csvMapper = new CsvMapper();
         CsvSchema schema = CsvSchema.emptySchema()
                 .withHeader()
                 .withColumnSeparator('|')
@@ -545,7 +551,7 @@ public class ChartParser {
 
         try {
             MappingIterator<ChartCharacter> mappingIterator =
-                    csvMapper.readerFor(ChartCharacter.class)
+                    getCsvMapper().readerFor(ChartCharacter.class)
                             .with(schema)
                             .readValues(csvChart);
             return mappingIterator.readAll();

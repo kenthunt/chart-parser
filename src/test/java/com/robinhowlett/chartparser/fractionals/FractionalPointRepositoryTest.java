@@ -1,10 +1,10 @@
 package com.robinhowlett.chartparser.fractionals;
 
-import com.robinhowlett.chartparser.TestChartResources;
-
 import org.junit.Test;
 
 import java.util.ArrayList;
+
+import static com.robinhowlett.chartparser.ChartParser.getObjectMapper;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -21,8 +21,7 @@ public class FractionalPointRepositoryTest {
 
         FractionalPoint expected = new FractionalPoint("150 yards", 450, fractionals);
 
-        FractionalPointRepository repository =
-                new FractionalPointRepository(TestChartResources.MAPPER);
+        FractionalPointRepository repository = new FractionalPointRepository(getObjectMapper());
 
         FractionalTreeSet fractionalPoints = repository.findAll();
         assertThat(fractionalPoints.size(), equalTo(40));

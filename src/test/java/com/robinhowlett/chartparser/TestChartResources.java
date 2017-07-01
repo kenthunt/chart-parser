@@ -1,7 +1,6 @@
 package com.robinhowlett.chartparser;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.robinhowlett.chartparser.charts.pdf.Breed;
 import com.robinhowlett.chartparser.charts.pdf.ChartCharacter;
 import com.robinhowlett.chartparser.charts.pdf.running_line.RunningLineColumnIndex;
@@ -30,14 +29,13 @@ import java.util.Map;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+import static com.robinhowlett.chartparser.ChartParser.getObjectMapper;
 import static com.robinhowlett.chartparser.charts.pdf.running_line.RunningLine
         .groupRunningLineCharactersByColumn;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class TestChartResources {
-
-    public final static ObjectMapper MAPPER = new ObjectMapper().findAndRegisterModules();
 
     public File getPdfChartsFile() {
         return getPdfChartsFile("ARP_2016-07-24_race-charts.pdf");
@@ -242,7 +240,7 @@ public class TestChartResources {
     public FractionalTreeSet getFractionalTimePoints() throws IOException {
         File fractionalTimesFile = new File(
                 getClass().getClassLoader().getResource("fractional-times.json").getFile());
-        FractionalTreeSet fractionalPoints = MAPPER.readValue(fractionalTimesFile,
+        FractionalTreeSet fractionalPoints = getObjectMapper().readValue(fractionalTimesFile,
                 new TypeReference<FractionalTreeSet>() {
                 });
         return fractionalPoints;
@@ -286,7 +284,7 @@ public class TestChartResources {
         }
         File pointsOfCallFile =
                 new File(getClass().getClassLoader().getResource(fileName).getFile());
-        PointsOfCallTreeSet pointsOfCall = MAPPER.readValue(pointsOfCallFile,
+        PointsOfCallTreeSet pointsOfCall = getObjectMapper().readValue(pointsOfCallFile,
                 new TypeReference<PointsOfCallTreeSet>() {
                 });
         return pointsOfCall.floor(new PointsOfCall("", raceDistanceInFeet, null));
