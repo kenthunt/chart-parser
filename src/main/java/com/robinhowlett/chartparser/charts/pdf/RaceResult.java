@@ -39,6 +39,8 @@ import static java.util.stream.Collectors.toList;
         "starters", "scratches", "fractionals", "splits", "wagering", "footnotes"})
 public class RaceResult {
 
+    @JsonProperty("cancellation") // required for property order but unwrapped
+    @JsonUnwrapped
     private final Cancellation cancellation;
     private final LocalDate raceDate;
     private final Track track;

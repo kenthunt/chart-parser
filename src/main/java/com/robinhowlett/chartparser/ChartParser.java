@@ -1,10 +1,12 @@
 package com.robinhowlett.chartparser;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
+import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import com.robinhowlett.chartparser.charts.pdf.*;
 import com.robinhowlett.chartparser.charts.pdf.DistanceSurfaceTrackRecord.RaceDistance;
 import com.robinhowlett.chartparser.charts.pdf.Starter.Claim;
@@ -58,6 +60,8 @@ public class ChartParser {
             Pattern.compile("^Copyright (\\d+) Equibase Company LLC. All Rights Reserved\\.$");
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ChartParser.class);
+    private static ObjectMapper mapper;
+    private static CsvMapper csvMapper;
 
     protected final TrackService trackService;
     protected final FractionalService fractionalService;
@@ -85,15 +89,27 @@ public class ChartParser {
     }
 
     public static ObjectMapper getObjectMapper() {
+        if (mapper != null) {
+            return mapper;
+        }
+
         SimpleModule simpleLocalDateModule = new SimpleModule();
         simpleLocalDateModule.addSerializer(LocalDate.class, new SimpleLocalDateSerializer());
         simpleLocalDateModule.addDeserializer(LocalDate.class, new SimpleLocalDateDeserializer());
-        // this will also add JDK 8 Parameter Name access
-        return new ObjectMapper().findAndRegisterModules().registerModule(simpleLocalDateModule);
+        mapper = new ObjectMapper()
+                // adds JDK 8 Parameter Name access for cleaner JSON-to-Object mapping
+                .registerModule(new ParameterNamesModule(JsonCreator.Mode.PROPERTIES))
+                .registerModule(simpleLocalDateModule);
+        return mapper;
     }
 
     public static CsvMapper getCsvMapper() {
-        return new CsvMapper();
+        if (csvMapper != null) {
+            return csvMapper;
+        }
+
+        csvMapper = new CsvMapper();
+        return csvMapper;
     }
 
     public List<RaceResult> parse(File pdfChartFile) {

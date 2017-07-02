@@ -7,6 +7,18 @@
     <groupId>com.robinhowlett</groupId>
     <artifactId>chart-parser</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +26,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <bouncycastle.version>1.54</bouncycastle.version>
-        <jackson.version>2.8.5</jackson.version>
+        <jackson.version>2.8.8</jackson.version>
     </properties>
 
     <dependencies>
@@ -93,7 +105,7 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+
 
 </project>

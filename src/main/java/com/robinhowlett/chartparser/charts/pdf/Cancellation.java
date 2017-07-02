@@ -1,7 +1,6 @@
 package com.robinhowlett.chartparser.charts.pdf;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.List;
@@ -22,8 +21,7 @@ public class Cancellation {
             Pattern.compile("^(Cancelled.*|CANCELLED.*) - (.+)");
     public static final String NO_REASON_AVAILABLE = null;
 
-    @JsonProperty("cancelled")
-    private final boolean isCancelled;
+    private final boolean cancelled;
     private final String reason;
 
     public Cancellation() {
@@ -34,8 +32,8 @@ public class Cancellation {
         this(true, reason);
     }
 
-    Cancellation(boolean isCancelled, String reason) {
-        this.isCancelled = isCancelled;
+    Cancellation(boolean cancelled, String reason) {
+        this.cancelled = cancelled;
         this.reason = reason;
     }
 
@@ -63,7 +61,7 @@ public class Cancellation {
     }
 
     public boolean isCancelled() {
-        return isCancelled;
+        return cancelled;
     }
 
     public String getReason() {
@@ -77,13 +75,13 @@ public class Cancellation {
 
         Cancellation that = (Cancellation) o;
 
-        if (isCancelled != that.isCancelled) return false;
+        if (cancelled != that.cancelled) return false;
         return reason != null ? reason.equals(that.reason) : that.reason == null;
     }
 
     @Override
     public int hashCode() {
-        int result = (isCancelled ? 1 : 0);
+        int result = (cancelled ? 1 : 0);
         result = 31 * result + (reason != null ? reason.hashCode() : 0);
         return result;
     }
@@ -91,7 +89,7 @@ public class Cancellation {
     @Override
     public String toString() {
         return "Cancellation{" +
-                "isCancelled=" + isCancelled +
+                "cancelled=" + cancelled +
                 ", reason='" + reason + '\'' +
                 '}';
     }
