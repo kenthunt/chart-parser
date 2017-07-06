@@ -7,6 +7,7 @@ import com.robinhowlett.chartparser.exceptions.ChartParserException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.MINUTES;
@@ -92,6 +93,15 @@ public class FractionalPoint {
 
         public boolean hasTimeAndMillis() {
             return (getTime() != null && !getTime().isEmpty() && getMillis() != null);
+        }
+
+        public String getFormattedTime() {
+            long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
+            long seconds = (TimeUnit.MILLISECONDS.toSeconds(millis) -
+                    TimeUnit.MINUTES.toSeconds(minutes));
+            long subSecondMillis = (millis % 1000);
+
+            return String.format("%d:%02d.%03d", minutes, seconds, subSecondMillis);
         }
 
         @Override

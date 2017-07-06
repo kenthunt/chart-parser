@@ -1,6 +1,7 @@
 package com.robinhowlett.chartparser;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -108,7 +109,14 @@ public class ChartParser {
             return csvMapper;
         }
 
-        csvMapper = new CsvMapper();
+        SimpleModule simpleLocalDateModule = new SimpleModule();
+        simpleLocalDateModule.addSerializer(LocalDate.class, new SimpleLocalDateSerializer());
+        simpleLocalDateModule.addDeserializer(LocalDate.class, new SimpleLocalDateDeserializer());
+
+        csvMapper = (CsvMapper) new CsvMapper()// adds JDK 8 Parameter Name access for cleaner JSON-to-Object mapping
+                .disable(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY)
+                .registerModule(new ParameterNamesModule(JsonCreator.Mode.PROPERTIES))
+                .registerModule(simpleLocalDateModule);
         return csvMapper;
     }
 

@@ -1,7 +1,6 @@
 package com.robinhowlett.chartparser.charts.pdf;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -172,12 +171,22 @@ public class RaceResult {
         return footnotes;
     }
 
-    @JsonIgnore
     public List<Starter> getWinners() {
         if (starters != null) {
             return starters.stream().filter(Starter::isWinner).collect(toList());
         }
         return new ArrayList<>();
+    }
+
+    public String getWinningTime() {
+        if (getWinners() != null && !getWinners().isEmpty()) {
+            return getWinners().get(0).getFinishFractional().getFormattedTime();
+        }
+        return null;
+    }
+
+    public int getNumberOfRunners() {
+        return (starters != null ? starters.size() : 0);
     }
 
     @Override
@@ -436,7 +445,7 @@ public class RaceResult {
                 RaceTypeNameBlackTypeBreed raceTypeNameBlackTypeBreed,
                 DistanceSurfaceTrackRecord distanceSurfaceTrackRecord) throws ChartParserException {
             if (starters != null) {
-                if (fractionals != null) {
+                if (fractionals != null && !fractionals.isEmpty()) {
                     starters = calculateForTBredsAndArabians(starters, fractionals);
                 } else if (raceTypeNameBlackTypeBreed != null && distanceSurfaceTrackRecord != null
                         && (raceTypeNameBlackTypeBreed.getBreed().equals(Breed.QUARTER_HORSE) ||

@@ -262,6 +262,13 @@ public class Starter {
                 horse.getName().equals(horseName);
     }
 
+    public Fractional getFinishFractional() {
+        if (fractionals != null && !fractionals.isEmpty()) {
+            return fractionals.get(fractionals.size() - 1);
+        }
+        return null;
+    }
+
     /**
      * Add the total lengths behind to the {@link Starter}'s {@link RelativePosition} for the
      * applicable {@link PointOfCall}
@@ -464,7 +471,7 @@ public class Starter {
             pointOfCall.setRelativePosition(relativePosition);
         }
 
-        // set finish distance for quarter horse races (as points of calls cover a variety of
+        // set finish distance for QH/Mixed races (as points of calls cover a variety of
         // distance up to or between a certain number of yards)
         Optional<PointOfCall> finishPointOfCall = pointsOfCallForDistance.getFinishPointOfCall();
         if (finishPointOfCall.isPresent()) {
