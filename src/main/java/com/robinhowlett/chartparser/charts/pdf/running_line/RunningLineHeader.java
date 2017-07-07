@@ -2,7 +2,6 @@ package com.robinhowlett.chartparser.charts.pdf.running_line;
 
 import com.robinhowlett.chartparser.charts.pdf.Chart;
 import com.robinhowlett.chartparser.charts.pdf.ChartCharacter;
-import com.robinhowlett.chartparser.charts.pdf.TrackRaceDateRaceNumber.InvalidRaceException;
 import com.robinhowlett.chartparser.exceptions.ChartParserException;
 
 import java.math.BigDecimal;
@@ -18,9 +17,6 @@ import java.util.TreeSet;
 import static com.robinhowlett.chartparser.charts.pdf.Chart.THREE;
 import static com.robinhowlett.chartparser.charts.pdf.Chart.round;
 
-/**
- * Created by rhowlett on 11/30/16.
- */
 public class RunningLineHeader {
 
     public static TreeSet<RunningLineColumnIndex> createIndexOfRunningLineColumns(

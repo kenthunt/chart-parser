@@ -8,16 +8,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-/**
- * Created by rhowlett on 11/30/16.
- */
 public class RunningLine {
 
     /**
-     * For each character in each running line, add it to a list assigned to the appropriate header column e.g. all the characters between
-     * @param runningLineColumnIndices
-     * @param runningLine
-     * @return
+     * For each character in each running line, add it to a list assigned to the appropriate header
+     * column e.g. all the characters between
      */
     public static Map<String, List<ChartCharacter>> groupRunningLineCharactersByColumn(
             TreeSet<RunningLineColumnIndex> runningLineColumnIndices,

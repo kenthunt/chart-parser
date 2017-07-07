@@ -9,9 +9,6 @@ import static com.robinhowlett.chartparser.ChartParser.getObjectMapper;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-/**
- * Created by rhowlett on 12/30/16.
- */
 public class FractionalPointRepositoryTest {
 
     @Test
