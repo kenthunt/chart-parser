@@ -104,10 +104,10 @@ public class RaceResultBuilderTest {
                                         1.5)));
                 add(fifth);
             }});
-            Fractional frac1_1 = new Fractional(1, "1/4", 1320, "22.88", 22880L);
-            Fractional frac1_2 = new Fractional(2, "1/2", 2640, "46.50", 46500L);
-            Fractional frac1_3 = new Fractional(3, "5/8", 3300, "59.31", 59310L);
-            Fractional frac1_6 = new Fractional(6, "Fin (3/4)", 3960, "1:12.98", 72980L);
+            Fractional frac1_1 = new Fractional(1, "1/4", 1320, "0:22.880", 22880L);
+            Fractional frac1_2 = new Fractional(2, "1/2", 2640, "0:46.500", 46500L);
+            Fractional frac1_3 = new Fractional(3, "5/8", 3300, "0:59.310", 59310L);
+            Fractional frac1_6 = new Fractional(6, "Fin (3/4)", 3960, "1:12.980", 72980L);
             Starter firstStarter = first.build();
             firstStarter.setFractionals(new ArrayList<Fractional>() {{
                 add(frac1_1);
@@ -135,36 +135,40 @@ public class RaceResultBuilderTest {
                 PointOfCall second = new PointOfCall(2, "1/4", 1320);
                 RelativePosition relativePosition2 = new RelativePosition(2,
                         new LengthsAhead("1 1/2", 1.5));
-                relativePosition2.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("2", 2.0));
+                relativePosition2.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("2", 2.0));
                 second.setRelativePosition(relativePosition2);
                 add(second);
 
                 PointOfCall third = new PointOfCall(3, "1/2", 2640);
                 RelativePosition relativePosition3 = new RelativePosition(3,
                         new LengthsAhead("4", 4.0));
-                relativePosition3.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("Head", 0.1));
+                relativePosition3.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("Head", 0.1));
                 third.setRelativePosition(relativePosition3);
                 add(third);
 
                 PointOfCall fourth = new PointOfCall(5, "Str", 3300);
                 RelativePosition relativePosition5 = new RelativePosition(2,
                         new LengthsAhead("1", 1.0));
-                relativePosition5.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1/2", 0.5));
+                relativePosition5.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("1/2", 0.5));
                 fourth.setRelativePosition(relativePosition5);
                 add(fourth);
 
                 PointOfCall fifth = new PointOfCall(6, "Fin", 3960);
                 RelativePosition relativePosition6 = new RelativePosition(2,
                         new LengthsAhead("3", 3.0));
-                relativePosition6.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1 1/2", 1.5));
+                relativePosition6.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("1 1/2", 1.5));
                 fifth.setRelativePosition(relativePosition6);
                 add(fifth);
             }});
             Starter secondStarter = second.build();
-            Fractional frac2_1 = new Fractional(1, "1/4", 1320, "23.18", 23183L);
-            Fractional frac2_2 = new Fractional(2, "1/2", 2640, "46.52", 46515L);
-            Fractional frac2_3 = new Fractional(3, "5/8", 3300, "59.39", 59388L);
-            Fractional frac2_6 = new Fractional(6, "Fin (3/4)", 3960, "1:13.22", 73221L);
+            Fractional frac2_1 = new Fractional(1, "1/4", 1320, "0:23.183", 23183L);
+            Fractional frac2_2 = new Fractional(2, "1/2", 2640, "0:46.515", 46515L);
+            Fractional frac2_3 = new Fractional(3, "5/8", 3300, "0:59.388", 59388L);
+            Fractional frac2_6 = new Fractional(6, "Fin (3/4)", 3960, "1:13.221", 73221L);
             secondStarter.setFractionals(new ArrayList<Fractional>() {{
                 add(frac2_1);
                 add(frac2_2);
@@ -233,28 +237,32 @@ public class RaceResultBuilderTest {
                 PointOfCall second = new PointOfCall(2, "1/4", 1320);
                 RelativePosition relativePosition2 = new RelativePosition(2,
                         new LengthsAhead("1 1/2", 1.5));
-                relativePosition2.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("2", 2.0));
+                relativePosition2.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("2", 2.0));
                 second.setRelativePosition(relativePosition2);
                 add(second);
 
                 PointOfCall third = new PointOfCall(3, "1/2", 2640);
                 RelativePosition relativePosition3 = new RelativePosition(3,
                         new LengthsAhead("4", 4.0));
-                relativePosition3.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("Head", 0.1));
+                relativePosition3.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("Head", 0.1));
                 third.setRelativePosition(relativePosition3);
                 add(third);
 
                 PointOfCall fourth = new PointOfCall(5, "Str", 3300);
                 RelativePosition relativePosition5 = new RelativePosition(2,
                         new LengthsAhead("1", 1.0));
-                relativePosition5.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1/2", 0.5));
+                relativePosition5.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("1/2", 0.5));
                 fourth.setRelativePosition(relativePosition5);
                 add(fourth);
 
                 PointOfCall fifth = new PointOfCall(6, "Fin", 3960);
                 RelativePosition relativePosition6 = new RelativePosition(2,
                         new LengthsAhead("3", 3.0));
-                relativePosition6.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1 1/2", 1.5));
+                relativePosition6.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind
+                        ("1 1/2", 1.5));
                 fifth.setRelativePosition(relativePosition6);
                 add(fifth);
             }});
@@ -264,10 +272,10 @@ public class RaceResultBuilderTest {
         RaceResult.Builder raceBuilder = new RaceResult.Builder();
 
         List<FractionalPoint.Fractional> fractionals = new ArrayList<>();
-        fractionals.add(new FractionalPoint.Fractional(1, "1/4", 1320, "22.88", 22880L));
-        fractionals.add(new FractionalPoint.Fractional(2, "1/2", 2640, "46.50", 46500L));
-        fractionals.add(new FractionalPoint.Fractional(3, "5/8", 3300, "59.31", 59310L));
-        fractionals.add(new FractionalPoint.Fractional(6, "Fin (3/4)", 3960, "1:12.98", 72980L));
+        fractionals.add(new FractionalPoint.Fractional(1, "1/4", 1320, "0:22.880", 22880L));
+        fractionals.add(new FractionalPoint.Fractional(2, "1/2", 2640, "0:46.500", 46500L));
+        fractionals.add(new FractionalPoint.Fractional(3, "5/8", 3300, "0:59.310", 59310L));
+        fractionals.add(new FractionalPoint.Fractional(6, "Fin (3/4)", 3960, "1:12.980", 72980L));
 
         // method under test
         starters = raceBuilder.calculateIndividualFractionalsAndSplits(starters, fractionals,
@@ -310,7 +318,8 @@ public class RaceResultBuilderTest {
                 PointOfCall pointOfCall = new PointOfCall(6, "Fin", 1050);
                 RelativePosition relativePosition = new RelativePosition(2,
                         new LengthsAhead("1/2", 0.5));
-                relativePosition.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1 3/4", 1.75));
+                relativePosition.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1" +
+                        " 3/4", 1.75));
                 pointOfCall.setRelativePosition(relativePosition);
                 add(pointOfCall);
             }});
@@ -347,7 +356,8 @@ public class RaceResultBuilderTest {
                         PointOfCall pointOfCall = new PointOfCall(6, "Fin", 1050);
                         RelativePosition relativePosition = new RelativePosition(2,
                                 new LengthsAhead("1/2", 0.5));
-                        relativePosition.setTotalLengthsBehind(new RelativePosition.TotalLengthsBehind("1 3/4", 1.75));
+                        relativePosition.setTotalLengthsBehind(new RelativePosition
+                                .TotalLengthsBehind("1 3/4", 1.75));
                         pointOfCall.setRelativePosition(relativePosition);
                         add(pointOfCall);
                     }});

@@ -60,7 +60,7 @@ public class FractionalPoint {
         }
 
         public boolean hasFractionalValue() {
-            return !getMillis().equals(Optional.empty());
+            return (getMillis() != null);
         }
 
         public int getPoint() {

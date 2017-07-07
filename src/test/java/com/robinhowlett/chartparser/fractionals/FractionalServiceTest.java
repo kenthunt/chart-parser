@@ -37,10 +37,10 @@ public class FractionalServiceTest {
     public void getFractionalPointsForDistance_WithSixFurlongFractions_ReturnsCorrectFractionals()
             throws Exception {
         List<FractionalPoint.Fractional> expected = new ArrayList<>();
-        expected.add(new FractionalPoint.Fractional(1, "1/4", 1320, "22.88", 22880L));
-        expected.add(new FractionalPoint.Fractional(2, "1/2", 2640, "46.50", 46500L));
-        expected.add(new FractionalPoint.Fractional(3, "5/8", 3300, "59.31", 59310L));
-        expected.add(new FractionalPoint.Fractional(6, "Fin", 3960, "1:12.98", 72980L));
+        expected.add(new FractionalPoint.Fractional(1, "1/4", 1320, "0:22.880", 22880L));
+        expected.add(new FractionalPoint.Fractional(2, "1/2", 2640, "0:46.500", 46500L));
+        expected.add(new FractionalPoint.Fractional(3, "5/8", 3300, "0:59.310", 59310L));
+        expected.add(new FractionalPoint.Fractional(6, "Fin", 3960, "1:12.980", 72980L));
 
         List<String> fractions = Arrays.asList("22.88", "46.50", "59.31", "1:12.98");
 
