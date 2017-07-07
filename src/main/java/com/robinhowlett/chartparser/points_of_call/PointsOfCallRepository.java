@@ -4,9 +4,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.robinhowlett.chartparser.charts.pdf.Breed;
 
-import java.io.BufferedReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 
 /**
  * Loads the points of call for a particular {@link Breed} as a {@link PointsOfCallTreeSet}. For
@@ -14,6 +16,8 @@ import java.io.InputStreamReader;
  * different based on whether the race distance is more in line with a TB or a QH race.
  */
 public class PointsOfCallRepository {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(PointsOfCallRepository.class);
 
     private ObjectMapper mapper;
 
@@ -23,12 +27,13 @@ public class PointsOfCallRepository {
 
     public PointsOfCallTreeSet findByBreed(Breed breed, String distance) {
         String fileNameForBreed = getFileNameForBreed(breed, distance);
+
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    ClassLoader.getSystemResourceAsStream(fileNameForBreed)));
-            return mapper.readValue(reader,
-                    new TypeReference<PointsOfCallTreeSet>() {
-                    });
+            try (InputStream pointsOfCall =
+                         getClass().getClassLoader().getResourceAsStream(fileNameForBreed)) {
+                return mapper.readValue(pointsOfCall, new TypeReference<PointsOfCallTreeSet>() {
+                });
+            }
         } catch (IOException e) {
             throw new RuntimeException(String.format("Unable to read %s as JSON", fileNameForBreed),
                     e);

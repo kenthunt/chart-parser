@@ -7,11 +7,8 @@ import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
-import java.util.Collections;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,14 +51,14 @@ public class TrackRepository {
         CsvSchema schema = CsvSchema.emptySchema().withColumnSeparator(';').withHeader();
 
         try {
-            File tracks = Paths.get(getClass().getClassLoader().getResource(FILENAME).toURI())
-                    .toFile();
-            MappingIterator<Track> mappingIterator = csvMapper.readerFor(Track.class)
-                    .with(schema).readValues(tracks);
-            return mappingIterator.readAll();
-        } catch (IOException | URISyntaxException e) {
-            LOGGER.error(String.format("Unable to convert %s into a list of Tracks", FILENAME), e);
+            try (InputStream tracks = getClass().getClassLoader().getResourceAsStream(FILENAME)) {
+                MappingIterator<Track> mappingIterator = csvMapper.readerFor(Track.class)
+                        .with(schema).readValues(tracks);
+                return mappingIterator.readAll();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(String.format("Unable to read %s as CSV", FILENAME),
+                    e);
         }
-        return Collections.emptyList();
     }
 }
