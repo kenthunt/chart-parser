@@ -55,6 +55,10 @@ List<RaceResult> raceResults = ChartParser.create().parse(Paths.get("ARP_2016-07
 
 ## Compiling
 
+***IMPORTANT:*** This project relies on enabling [the Java 8 method parameter reflection feature (`-parameters`)](https://docs.oracle.com/javase/tutorial/reflect/member/methodparameterreflection.html) in your JVM settings e.g. 
+
+![intellij-settings](https://i.imgur.com/8S89Byp.png)
+
 `chart-parser` is a [Maven-based](https://maven.apache.org/) Java open-source project. Running `mvn clean install` will compile the code, run all tests, and install the built artificat to the local repository.
 
 ## Notes
