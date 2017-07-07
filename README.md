@@ -43,6 +43,16 @@ It works by extracting out the x-y position, scale, font size, and unicode value
 
 * The software handles edge-case scenarios such as dead-heats, walkovers, non-betting races, disqualifications (including adjusting final winning positions), cancellations, claiming price information etc.
 
+## How to use
+
+[Handycapper](https://github.com/robinhowlett/handycapper) is provided as a sample application to parse and convert PDF charts to/from JSON.
+
+Parsing a PDF file is simple and can be done in one-line e.g.:
+
+```java
+List<RaceResult> raceResults = ChartParser.create().parse(Paths.get("ARP_2016-07-24_race-charts.pdf").toFile());
+```
+
 ## Compiling
 
 `chart-parser` is a [Maven-based](https://maven.apache.org/) Java open-source project. Running `mvn clean install` will compile the code, run all tests, and install the built artificat to the local repository.
