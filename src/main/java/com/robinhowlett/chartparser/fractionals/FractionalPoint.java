@@ -95,15 +95,6 @@ public class FractionalPoint {
             return (getTime() != null && !getTime().isEmpty() && getMillis() != null);
         }
 
-        public String getFormattedTime() {
-            long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
-            long seconds = (TimeUnit.MILLISECONDS.toSeconds(millis) -
-                    TimeUnit.MINUTES.toSeconds(minutes));
-            long subSecondMillis = (millis % 1000);
-
-            return String.format("%d:%02d.%03d", minutes, seconds, subSecondMillis);
-        }
-
         @Override
         public String toString() {
             return "Fractional{" +
@@ -282,17 +273,16 @@ public class FractionalPoint {
         }
     }
 
-    public static String convertToTime(long millis) {
-        long minutes = MILLISECONDS.toMinutes(millis);
-        long seconds = MILLISECONDS.toSeconds(millis) - MINUTES.toSeconds(minutes);
-        long hundredths = Math.round(
-                (double) (millis - (MINUTES.toMillis(minutes) + SECONDS.toMillis(seconds))) / 10);
-        String time;
-        if (minutes > 0) {
-            time = String.format("%d:%02d.%02d", minutes, seconds, hundredths);
+    public static String convertToTime(Long millis) {
+        if (millis != null) {
+            long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
+            long seconds = (TimeUnit.MILLISECONDS.toSeconds(millis) -
+                    TimeUnit.MINUTES.toSeconds(minutes));
+            long subSecondMillis = (millis % 1000);
+
+            return String.format("%d:%02d.%03d", minutes, seconds, subSecondMillis);
         } else {
-            time = String.format("%d.%02d", seconds, hundredths);
+            return null;
         }
-        return time;
     }
 }

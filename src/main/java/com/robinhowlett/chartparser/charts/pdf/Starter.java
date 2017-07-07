@@ -1,6 +1,7 @@
 package com.robinhowlett.chartparser.charts.pdf;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -262,6 +263,7 @@ public class Starter {
                 horse.getName().equals(horseName);
     }
 
+    @JsonIgnore
     public Fractional getFinishFractional() {
         if (fractionals != null && !fractionals.isEmpty()) {
             return fractionals.get(fractionals.size() - 1);
@@ -283,7 +285,8 @@ public class Starter {
                 pocRelPosition.setTotalLengthsBehind(totalLengthsBehind);
             }
         } else {
-            throw new ChartParserException(String.format("Point of call not found for column: %s", column));
+            throw new ChartParserException(String.format("Point of call not found for column: " +
+                    "%s", column));
         }
         return this;
     }

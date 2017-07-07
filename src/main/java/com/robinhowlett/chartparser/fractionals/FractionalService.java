@@ -51,7 +51,7 @@ public class FractionalService {
                             Fractional fractional =
                                     fractionalPoints.get(fractionalPoints.size() - 1);
                             fractional.setMillis(millis.get());
-                            fractional.setTime(fraction);
+                            fractional.setTime(FractionalPoint.convertToTime(millis.get()));
                             fractionals.add(fractional);
                         } else {
                             // attempt to guess the fractional that corresponds to the fraction time
@@ -75,7 +75,7 @@ public class FractionalService {
                                         fractional.getFeet() <= feetMax) {
                                     fractionalPoints.remove(fractional);
                                     fractional.setMillis(millis.get());
-                                    fractional.setTime(fraction);
+                                    fractional.setTime(FractionalPoint.convertToTime(millis.get()));
                                     fractionals.add(fractional);
                                     break;
                                 }
@@ -90,7 +90,7 @@ public class FractionalService {
                     Optional<Long> millis = calculateMillisecondsForFraction(time);
                     if (millis.isPresent()) {
                         fractional.setMillis(millis.get());
-                        fractional.setTime(time);
+                        fractional.setTime(FractionalPoint.convertToTime(millis.get()));
                     }
                     fractionals.add(fractional);
                     index++;
@@ -102,7 +102,7 @@ public class FractionalService {
     }
 
     private boolean isLastFraction(List<String> fractions, int i) {
-        return i == (fractions.size() - 1);
+        return (i == (fractions.size() - 1));
     }
 
     private static FractionalPoint createForFloor(int fractionalPointInFeet) {

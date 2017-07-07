@@ -1,6 +1,7 @@
 package com.robinhowlett.chartparser.charts.pdf;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -35,7 +36,8 @@ import static java.util.stream.Collectors.toList;
  */
 @JsonPropertyOrder({"cancellation", "raceDate", "track", "raceNumber", "conditions",
         "distanceSurfaceTrackRecord", "purse", "weather", "postTimeStartCommentsTimer", "deadHeat",
-        "starters", "scratches", "fractionals", "splits", "wagering", "footnotes"})
+        "numberOfRunners", "starters", "scratches", "fractionals", "splits", "wagering",
+        "footnotes"})
 public class RaceResult {
 
     @JsonProperty("cancellation") // required for property order but unwrapped
@@ -178,9 +180,10 @@ public class RaceResult {
         return new ArrayList<>();
     }
 
+    @JsonIgnore
     public String getWinningTime() {
         if (getWinners() != null && !getWinners().isEmpty()) {
-            return getWinners().get(0).getFinishFractional().getFormattedTime();
+            return getWinners().get(0).getFinishFractional().getTime();
         }
         return null;
     }
