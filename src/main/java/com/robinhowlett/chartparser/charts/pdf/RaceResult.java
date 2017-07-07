@@ -173,6 +173,11 @@ public class RaceResult {
         return footnotes;
     }
 
+    public int getNumberOfRunners() {
+        return (starters != null ? starters.size() : 0);
+    }
+
+    @JsonIgnore
     public List<Starter> getWinners() {
         if (starters != null) {
             return starters.stream().filter(Starter::isWinner).collect(toList());
@@ -186,10 +191,6 @@ public class RaceResult {
             return getWinners().get(0).getFinishFractional().getTime();
         }
         return null;
-    }
-
-    public int getNumberOfRunners() {
-        return (starters != null ? starters.size() : 0);
     }
 
     @Override
