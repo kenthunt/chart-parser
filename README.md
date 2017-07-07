@@ -61,6 +61,6 @@ List<RaceResult> raceResults = ChartParser.create().parse(Paths.get("ARP_2016-07
 
 This software is open-source and released under the [MIT License](https://github.com/robinhowlett/chart-parser/blob/master/LICENSE). 
 
-This project contains [a single sample Equibase PDF chart](https://github.com/robinhowlett/chart-parser/blob/master/src/test/resources/ARP_2016-07-24_race-charts.pdf) included for educational and demonstration purposes only.
+This project contains [a single sample Equibase PDF chart](https://github.com/robinhowlett/chart-parser/blob/master/src/test/resources/ARP_2016-07-24_race-charts.pdf) included for testing, educational and demonstration purposes only.
 
 It is recommended users of this software be aware of the conditions on the PDF charts that may apply.
